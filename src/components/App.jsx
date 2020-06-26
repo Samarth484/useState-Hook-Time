@@ -7,10 +7,14 @@ function App() {
     latestTime(new Date().toLocaleTimeString("it-IT"));
     console.log(time);
   }
+  function setTimer(){
+    setInterval(GetTime, 1000);
+  }
+  
   return (
     <div className="container">
       <h1>{time}</h1>
-      <button onClick={GetTime}>Get Time</button>
+      <button onClick={setTimer}>Get Time</button>
     </div>
   );
 }
